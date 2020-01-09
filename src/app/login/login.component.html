@@ -1,0 +1,29 @@
+<form #studentForm="ngForm" (ngSubmit)="onLogin(studentForm)">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Login</h3>           
+        </div>
+        <div class="panel-body">
+         
+            <div class="form-group" [class.has-error]="Email.invalid && Email.touched" [class.has-success]="Email.valid">
+                <label for="Email">Email</label>
+                <input id="Email" ngModel name="email" type="email" required class="form-control" #Email="ngModel">
+                <span *ngIf="Email.invalid && Email.touched" class="help-block">First Name is required</span>
+            </div>
+         
+            <div class="form-group" [class.has-error]="Password.invalid && Password.touched" [class.has-success]="Password.valid">
+                    <label for="Password">Password</label>
+                    <input id="Password" ngModel name="password" type="text" required class="form-control" #Password="ngModel">
+                    <span *ngIf="Password.invalid && Password.touched" class="help-block">Last Name is required</span>
+            </div>           
+           
+            <div class="panel-footer">
+                <button type="submit" class="btn btn-primary btn-space btn-width" >Login</button>  
+            </div>
+               
+        </div>
+        
+    </div>
+    </form>
+  
+

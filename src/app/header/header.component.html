@@ -1,0 +1,17 @@
+<ul class="nav navbar-nav">
+    <li >
+      <a routerLink = "list">List</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <a routerLink = "edit/0">Create</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a routerLink = "signup">Signup</a>
+    </li>
+    <li *ngIf="!userIsAuthenticated">
+      <a routerLink = "login">Login</a>
+    </li>
+    <li *ngIf="userIsAuthenticated">
+      <button class="btn btn-danger btn-space btn-width" (click)="onLogout()">Logout</button>
+    </li>
+  </ul>

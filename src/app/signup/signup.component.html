@@ -1,0 +1,27 @@
+<form #userForm="ngForm" (ngSubmit)="ngSignup(userForm)">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Welcome to Signup</h3>           
+        </div>
+        <div class="panel-body">
+         
+            <div class="form-group" [class.has-error]="EmailControl.invalid && EmailControl.touched" [class.has-success]="EmailControl.valid">
+                <label for="Email">Input Email</label>
+                <input id="Email" ngModel name="email" type="email" required class="form-control" #EmailControl="ngModel">
+                <span *ngIf="EmailControl.invalid && EmailControl.touched" class="help-block">Email is required</span>
+            </div>
+         
+            <div class="form-group" [class.has-error]="PasswordControl.invalid && PasswordControl.touched" [class.has-success]="PasswordControl.valid">
+                    <label for="Password">Create Password</label>
+                    <input id="Password" ngModel name="password" type="text" required class="form-control" #PasswordControl="ngModel">
+                    <span *ngIf="PasswordControl.invalid && PasswordControl.touched" class="help-block">Password is required</span>
+            </div>           
+           
+            <div class="panel-footer">
+                <button type="submit" class="btn btn-primary btn-space btn-width">Signup Done</button>  
+            </div>
+               
+        </div>
+        
+    </div>
+    </form>
