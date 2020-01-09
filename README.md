@@ -1,7 +1,12 @@
 # MEAN Full Stack Student Admin Web Appliction
 
 This project is a full stack web application done by MEAN and could be running at web browser.
-Basic CRUD and frontend search functions available.
+Functions bellow available:
+  1. Basic CRUD
+  2. Signup/Login
+  3. First name search at main page
+  4. Error warning and handler
+  
 Frontend by Angular8, Backdend by Express and Node.js, database resource is MongoDB.Atlas.
 Offers simple student administration UI
 
