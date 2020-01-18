@@ -1,4 +1,4 @@
-# MEAN Full Stack Student Admin Web Appliction
+# SimpleManagementProject
 
 This project is a full stack web application done by MEAN and could be running at web browser.
 Functions bellow available:
